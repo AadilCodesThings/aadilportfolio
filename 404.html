@@ -24,16 +24,25 @@ a:hover{color:#C24B1F}
 @media (max-width:640px){.nav-links{display:none !important}.nav-menu{display:block}}
 @media (prefers-reduced-motion:reduce){.ig,.btn,.stamp{transition:none}}
 html{scroll-behavior:smooth}
-.note{display:none}
-.nt{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
-.nt:checked ~ * .note,.nt:checked ~ .note{display:block}
-.nt:checked ~ header,.nt:checked ~ section{outline:1.5px dashed #2F6FE4;outline-offset:6px;border-radius:4px}
+.nt{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.note-wrap{display:none;position:absolute;inset:0;pointer-events:none;z-index:20}
+:root:has(.nt:checked) .note-wrap{display:block}
+header,section{position:relative}
+.note{position:sticky;top:16px;display:block;width:max-content;margin-left:auto;pointer-events:auto}
+.note.left{margin-left:0;margin-right:auto}
+.note summary{list-style:none;cursor:pointer;width:34px;height:34px;border-radius:50%;background:#2F6FE4;color:#FFFFFF;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center;box-shadow:2px 2px 0 #161A17;border:1.5px solid #161A17;box-sizing:border-box}
+.note summary::-webkit-details-marker{display:none}
+.note summary:focus-visible{outline:3px solid #161A17;outline-offset:2px}
+.note[open] summary{background:#161A17}
+.note-card{position:absolute;top:42px;right:0;width:min(320px, calc(100vw - 48px));background:#EEF2FB;border:1.5px dashed #2F6FE4;border-radius:12px;padding:14px 16px;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:13px;line-height:1.6;color:#1F4FB8;box-shadow:4px 4px 0 rgba(22,26,23,.12);box-sizing:border-box}
+.note.left .note-card{right:auto;left:0}
+:root:has(.nt:checked) header,:root:has(.nt:checked) section{outline:1.5px dashed #2F6FE4;outline-offset:6px;border-radius:4px}
 .notes-switch{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom, 0px));z-index:50;display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:10px 16px;background:#FBFAF5;border:1.5px solid #161A17;border-radius:999px;box-shadow:4px 4px 0 #161A17;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:13px;cursor:pointer;user-select:none}
 .notes-switch .track{width:30px;height:16px;border:1.5px solid #161A17;border-radius:999px;position:relative;box-sizing:border-box;transition:background .15s ease}
 .notes-switch .knob{position:absolute;top:2px;left:2px;width:9px;height:9px;border-radius:50%;background:#161A17;transition:transform .15s ease}
-.nt:checked ~ .notes-switch .track{background:#2F6FE4;border-color:#2F6FE4}
-.nt:checked ~ .notes-switch .knob{transform:translateX(13px);background:#FBFAF5}
-.nt:focus-visible ~ .notes-switch{outline:3px solid #2F6FE4;outline-offset:3px}
+.notes-switch:has(.nt:checked) .track{background:#2F6FE4;border-color:#2F6FE4}
+.notes-switch:has(.nt:checked) .knob{transform:translateX(13px);background:#FBFAF5}
+.notes-switch:has(.nt:focus-visible){outline:3px solid #2F6FE4;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.notes-switch .track,.notes-switch .knob{transition:none}}
 </style>
 </head>
