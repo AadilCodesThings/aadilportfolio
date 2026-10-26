@@ -108,9 +108,10 @@ html{scroll-behavior:smooth}
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #2E3430">Have something else in mind? Tell me what you’re working on, and we’ll shape a scope that fits.</p>
 </article>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 8px; max-width: 720px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 8px">
 <img loading="lazy" decoding="async" src="assets/photo-workshop-upright.jpg" alt="Aadil leading a hands-on sticky-note workshop" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 40%; border: 1.5px solid #161A17; border-radius: 16px; box-sizing: border-box; display: block">
 <img loading="lazy" decoding="async" src="assets/photo-presenting.jpg" alt="Aadil presenting research findings to a room" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 30% center; border: 1.5px solid #161A17; border-radius: 16px; box-sizing: border-box; display: block">
+<img loading="lazy" decoding="async" src="assets/photo-talk.jpg" alt="Aadil giving a talk on preparing to be a UX designer and researcher" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 30% center; border: 1.5px solid #161A17; border-radius: 16px; box-sizing: border-box; display: block">
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 8px">
 <p style="margin: 0; font-family: 'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size: 13px; color: #5C635E">From Design XP apprentices</p>
@@ -238,17 +239,17 @@ html{scroll-behavior:smooth}
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: end">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <p style="margin: 0; font-family: 'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size: 13px; color: #5C635E">How it starts</p>
-<h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 52px); line-height: 1; font-weight: 600; letter-spacing: -0.025em">Book a free 30-minute call</h2>
+<h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 52px); line-height: 1; font-weight: 600; letter-spacing: -0.025em">Book a free 30&#8209;minute call</h2>
 </div>
 <p style="margin: 0; max-width: 60ch; font-size: 17px; line-height: 1.6; color: #2E3430">We talk through your product and goals. If it’s a good fit, I send a short proposal with a fixed scope and price.</p>
 </div>
-<div id="cal-embed" style="background: #FBFAF5; border: 1.5px solid #161A17; border-radius: 16px; overflow: hidden"><div style="width:100%;min-height:640px;overflow:auto" id="my-cal-inline-30min"></div></div>
+<div id="cal-embed" style="border: 1.5px solid #161A17; border-radius: 16px; box-shadow: 6px 6px 0 #161A17; overflow: hidden; background: #FFFFFF"><div style="width:100%" id="my-cal-inline-30min"></div></div>
 <script type="text/javascript">
 (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", "30min", {origin:"https://app.cal.com"});
 Cal.config = Cal.config || {}; Cal.config.forwardQueryParams = true;
-Cal.ns["30min"]("inline", { elementOrSelector:"#my-cal-inline-30min", config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"}, calLink: "aadilkhan/30min" });
-Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+Cal.ns["30min"]("inline", { elementOrSelector:"#my-cal-inline-30min", config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}, calLink: "aadilkhan/30min" });
+Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#161A17","cal-brand-emphasis":"#2E3430","cal-brand-text":"#F1EFE6"}}});
 </script>
 <p style="margin: 0; font-size: 16px">Prefer email? <a href="mailto:m.aadilk96@gmail.com?subject=Project%20inquiry">m.aadilk96@gmail.com</a></p>
 </div>
